@@ -53,86 +53,15 @@ exploratory-data-analysis/
 │   └── input/
 │       └── cleaned_dataset.xlsx
 │
-├── images/
-│   ├── 01_quantity_distribution.png
-│   ├── 02_unit_price_distribution.png
-│   ├── 03_items_in_cart_distribution.png
-│   ├── 04_total_price_distribution.png
-│   ├── 05_boxplot_quantity.png
-│   ├── 06_boxplot_unitprice.png
-│   ├── 07_boxplot_itemsincart.png
-│   ├── 08_boxplot_totalprice.png
-│   ├── 09_monthly_order_trend.png
-│   ├── 10_monthly_total_sales_trend.png
-│   ├── 11_monthly_order_trend.png
-│   └── 12_monthly_total_sales_trend.png
-│
 ├── notebooks/
 │   └── 01_project_purpose.ipynb
 │
-├── CHANGE_LOG.md
 ├── README.md
+├── SUMMARY.md
+├── CHANGE_LOG.md
 ├── requirements.txt
-└── SUMMARY.md
+└── .gitignore
 ```
-
-## Chart Preview
-
-The analysis includes visual evidence to make the results easier to understand. The charts below give a quick preview of the distributions, outliers, and time-based trends explored in the project.
-
-### Numerical Distributions
-
-**Quantity Distribution** — Shows how order quantities are distributed across the dataset.
-
-![Quantity Distribution](images/01_quantity_distribution.png)
-
-**Unit Price Distribution** — Shows the distribution of unit prices across the records.
-
-![Unit Price Distribution](images/02_unit_price_distribution.png)
-
-**Items in Cart Distribution** — Shows how the number of items in each cart is distributed.
-
-![Items in Cart Distribution](images/03_items_in_cart_distribution.png)
-
-**Total Price Distribution** — Shows how total order values are distributed and helps highlight the overall spread of sales values.
-
-![Total Price Distribution](images/04_total_price_distribution.png)
-
-### Outlier Analysis
-
-**Quantity Boxplot** — Helps check the spread of quantity values and identify potential outliers.
-
-![Quantity Boxplot](images/05_boxplot_quantity.png)
-
-**Unit Price Boxplot** — Helps show the spread of unit prices and whether unusual values are present.
-
-![Unit Price Boxplot](images/06_boxplot_unitprice.png)
-
-**Items in Cart Boxplot** — Shows the spread of cart sizes and helps identify unusual observations.
-
-![Items in Cart Boxplot](images/07_boxplot_itemsincart.png)
-
-**Total Price Boxplot** — Highlights unusually high or low total order values for further investigation.
-
-![Total Price Boxplot](images/08_boxplot_totalprice.png)
-
-### Monthly Trends
-
-**Monthly Order Trend** — Shows how the number of orders changes over time.
-
-![Monthly Order Trend](images/09_monthly_order_trend.png)
-
-**Monthly Total Sales Trend** — Shows how total sales change from month to month.
-
-![Monthly Total Sales Trend](images/10_monthly_total_sales_trend.png)
-
-**Additional Monthly Order Trend Chart** — Saved chart showing the monthly order trend from the analysis.
-
-![Monthly Order Trend](images/11_monthly_order_trend.png)
-
-**Additional Monthly Total Sales Trend Chart** — Saved chart showing the monthly total sales trend from the analysis.
-
-![Monthly Total Sales Trend](images/12_monthly_total_sales_trend.png)
 
 ## Final Output
 
