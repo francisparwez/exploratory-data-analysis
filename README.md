@@ -2,9 +2,9 @@
 
 This is Project 2 of my Data Analytics Internship at DecodeLabs.
 
-In Project 1, I cleaned and validated the dataset. This project uses that cleaned dataset to explore the data and understand its patterns, trends, distributions, unusual values, and relationships.
+Project 1 was about cleaning and validating the dataset. In this project, I will use that cleaned and validated dataset to explore what the data is actually telling me by looking for patterns, trends, distributions, and useful observations.
 
-The main goal is not just to calculate numbers or create charts, but to use the analysis to find useful observations and understand what they mean.
+The work is being completed step by step, starting with understanding the purpose of the EDA before moving into the analysis.
 
 ## What I Will Explore
 
@@ -34,11 +34,7 @@ The analysis will follow a simple process:
 
 **Question → Exploration → Evidence → Insight**
 
-I will first understand the data, then investigate the important variables and relationships, look for patterns and unusual observations, and finally explain the main findings in a way that is easy to understand.
-
-Outliers will be investigated rather than automatically removed, since an unusual value can sometimes be a useful signal rather than a data error.
-
-Correlation results will also be interpreted carefully because correlation does not mean causation.
+The first task is to establish the purpose of the EDA and confirm that the cleaned Project 1 dataset is being used as the starting point for the analysis.
 
 ## Tools Used
 
@@ -51,14 +47,14 @@ Correlation results will also be interpreted carefully because correlation does 
 ## Project Structure
 
 ```text
-exploratory-data-analysis__eda/
+exploratory-data-analysis/
 │
 ├── data/
 │   └── input/
 │       └── cleaned_dataset.xlsx
 │
 ├── notebooks/
-│   └── 01_exploratory_data_analysis.ipynb
+│   └── 01_project_purpose.ipynb
 │
 ├── README.md
 ├── SUMMARY.md
@@ -71,7 +67,13 @@ exploratory-data-analysis__eda/
 
 The final notebook will contain the completed exploratory analysis, visual evidence, key observations, and conclusions from the dataset.
 
-The README will be updated after the analysis is completed with the main findings and final project results.
+### Current Progress
+
+**Task 1 — Project Purpose: Completed**
+
+The cleaned dataset from Project 1 has been loaded successfully and confirmed as the starting point for the EDA. The dataset contains 1,200 records and 14 columns.
+
+The remaining parts of Project 2 will be added separately as each task is completed and verified.
 
 ## Internship
 

@@ -1,33 +1,28 @@
 # Project 2 — Exploratory Data Analysis (EDA)
 
-## Overview
+## Task 1 — Project Purpose
 
-This project is the second project in my Data Analytics Internship at DecodeLabs.
+Task 1 establishes the purpose and starting point of Project 2.
 
-Project 1 focused on cleaning and validating the dataset. Project 2 uses that cleaned dataset to explore the data and understand the patterns, trends, distributions, unusual values, and relationships within it.
+Project 2 follows Project 1 and uses the cleaned and validated dataset to begin exploring what the data is telling us.
 
-## Starting Dataset
+### Completed Work
 
-The analysis starts with the cleaned dataset produced in Project 1:
+The notebook `01_project_purpose.ipynb`:
 
-`data/input/cleaned_dataset.xlsx`
+- Loads the cleaned dataset from `data/input/cleaned_dataset.xlsx`
+- Displays the first records
+- Confirms the dataset contains 1,200 records and 14 columns
+- Records that the dataset has already been cleaned and validated in Project 1
 
-The dataset contains 1,200 records and 14 columns.
+### Current Result
 
-## Planned Analysis
+The cleaned Project 1 dataset is now established as the input for the EDA.
 
-The EDA will cover descriptive statistics such as count, mean, median, and the five-number summary. I will also look at the shape of numerical distributions, compare mean and median, investigate trends and potential outliers, and explore relationships between variables using correlation analysis.
+No descriptive statistics, trend analysis, outlier analysis, correlation analysis, or business insight work has been completed as part of Task 1.
 
-Outliers will be investigated rather than automatically removed. Where appropriate, I will use IQR and Z-score methods to identify unusual values and then look at their context.
+## Current Status
 
-The analysis will also use visualizations to make the main patterns and findings easier to understand.
+**Task 1 — Completed**
 
-## Final Goal
-
-The aim is to move from the numbers to useful observations and explain what those observations mean. The final analysis should identify the strongest findings, explain their possible business importance, and provide recommendations where they are supported by the data.
-
-## Project Status
-
-**In Progress**
-
-This summary will be updated when the EDA is completed.
+The next task will be added only after Task 1 has been documented and committed.
