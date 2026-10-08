@@ -34,7 +34,7 @@ The analysis will follow a simple process:
 
 **Question → Exploration → Evidence → Insight**
 
-The first two tasks established the purpose of the EDA and examined the numerical fields using descriptive statistics, distribution analysis, and mean-versus-median comparisons.
+The first three tasks established the purpose of the EDA, examined the numerical fields, and investigated trends and unusual observations.
 
 ## Tools Used
 
@@ -43,6 +43,7 @@ The first two tasks established the purpose of the EDA and examined the numerica
 - Jupyter Notebook
 - Matplotlib
 - Seaborn
+- SciPy
 
 ## Project Structure
 
@@ -55,7 +56,13 @@ exploratory-data-analysis/
 │   ├── 01_quantity_distribution.png
 │   ├── 02_unit_price_distribution.png
 │   ├── 03_items_in_cart_distribution.png
-│   └── 04_total_price_distribution.png
+│   ├── 04_total_price_distribution.png
+│   ├── 05_monthly_order_trend.png
+│   ├── 06_monthly_total_sales_trend.png
+│   ├── 07_boxplot_quantity.png
+│   ├── 08_boxplot_unit_price.png
+│   ├── 09_boxplot_items_in_cart.png
+│   └── 10_boxplot_total_price.png
 ├── notebooks
 │   └── exploratory_data_analysis.ipynb
 ├── CHANGE_LOG.md
@@ -70,25 +77,63 @@ exploratory-data-analysis/
 
 ![Quantity Distribution](images/01_quantity_distribution.png)
 
-This histogram shows how many items were purchased per order. The values are concentrated within the small range of 1 to 5, with the distribution staying fairly balanced around the typical quantity.
+This histogram shows how many items were purchased in each order. The values stay within a small range of 1 to 5.
 
 ### 2. Unit Price Distribution
 
 ![Unit Price Distribution](images/02_unit_price_distribution.png)
 
-This chart shows the spread of unit prices across the orders. The values cover a wide price range, while the mean and median remain quite close to each other.
+This chart shows the spread of unit prices across the orders. The mean and median are close, so the centre of the distribution is fairly stable.
 
 ### 3. Items in Cart Distribution
 
 ![Items in Cart Distribution](images/03_items_in_cart_distribution.png)
 
-This histogram shows the number of items in a customer's cart for each order. Most observations are centred around the middle of the 1 to 10 range, with a little more variation than Quantity.
+This histogram shows the number of items in the cart for each order and how the observations are spread across the 1 to 10 range.
 
 ### 4. Total Price Distribution
 
 ![Total Price Distribution](images/04_total_price_distribution.png)
 
-This chart shows the distribution of total order values. The mean is higher than the median, which indicates that some higher-value orders are pulling the average upward.
+This chart shows the distribution of total order values. The mean is higher than the median, which is consistent with some higher-value orders pulling the average upward.
+
+## Trends and Outliers — Chart Preview
+
+### 5. Monthly Order Trend
+
+![Monthly Order Trend](images/05_monthly_order_trend.png)
+
+This line chart shows monthly order activity from January 2023 to June 2025. The number of orders moves up and down across the period, with June 2024 recording the highest monthly order count at 53.
+
+### 6. Monthly Total Sales Trend
+
+![Monthly Total Sales Trend](images/06_monthly_total_sales_trend.png)
+
+This chart shows how total monthly sales changed over the same period. Sales fluctuate noticeably, with the highest monthly total sales recorded in June 2024 at 68,068.54.
+
+### 7. Quantity Boxplot
+
+![Quantity Boxplot](images/07_boxplot_quantity.png)
+
+The boxplot shows the spread of `Quantity`. The IQR method did not identify any potential outliers for this variable.
+
+### 8. Unit Price Boxplot
+
+![Unit Price Boxplot](images/08_boxplot_unit_price.png)
+
+This boxplot shows the spread of `UnitPrice`. No potential outliers were identified using the IQR method.
+
+### 9. Items in Cart Boxplot
+
+![Items in Cart Boxplot](images/09_boxplot_items_in_cart.png)
+
+This boxplot shows the spread of `ItemsInCart`. The IQR method did not flag any observations as potential outliers.
+
+### 10. Total Price Boxplot
+
+![Total Price Boxplot](images/10_boxplot_total_price.png)
+
+The `TotalPrice` boxplot highlights the small number of unusually high-value orders identified by the IQR method. Eight records were flagged for further investigation.
 
 ## Final Output
 
@@ -105,6 +150,16 @@ The cleaned dataset from Project 1 has been loaded successfully and confirmed as
 The numerical fields were analyzed using count, mean, median, and the five-number summary. Distribution charts were created for Quantity, UnitPrice, ItemsInCart, and TotalPrice, and skewness was used to support the distribution analysis.
 
 The comparison between mean and median showed that `TotalPrice` has the largest gap. Its mean is 1053.97 compared with a median of 823.62, while the other variables have much smaller differences.
+
+**Task 3 — Trends and Outliers: Completed**
+
+Monthly order activity and total sales were analyzed from January 2023 to June 2025. June 2024 had the highest order count at 53 and the highest total sales at 68,068.54. January 2025 had the lowest monthly order count at 27, while April 2023 had the lowest monthly total sales at 27,751.71.
+
+The IQR method identified eight potential outliers in `TotalPrice`, representing 0.67% of the dataset. No IQR outliers were found for Quantity, UnitPrice, or ItemsInCart. The eight high-value records were checked against the expected `Quantity × UnitPrice` calculation and all passed the check.
+
+The Z-score method identified no observations above the threshold of 3. The IQR-identified TotalPrice records had Z-scores between 2.78 and 2.93, so they were unusual but not extreme under the Z-score rule.
+
+The eight records will be retained for the remaining analysis because the investigation did not find evidence of a calculation or pricing inconsistency.
 
 The remaining parts of Project 2 will be added separately as each task is completed and verified.
 
