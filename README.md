@@ -34,7 +34,7 @@ The analysis will follow a simple process:
 
 **Question → Exploration → Evidence → Insight**
 
-The first task is to establish the purpose of the EDA and confirm that the cleaned Project 1 dataset is being used as the starting point for the analysis.
+The first two tasks established the purpose of the EDA and examined the numerical fields using descriptive statistics, distribution analysis, and mean-versus-median comparisons.
 
 ## Tools Used
 
@@ -48,20 +48,47 @@ The first task is to establish the purpose of the EDA and confirm that the clean
 
 ```text
 exploratory-data-analysis/
-│
-├── data/
-│   └── input/
+├── data
+│   └── input
 │       └── cleaned_dataset.xlsx
-│
-├── notebooks/
-│   └── 01_project_purpose.ipynb
-│
-├── README.md
-├── SUMMARY.md
+├── images
+│   ├── 01_quantity_distribution.png
+│   ├── 02_unit_price_distribution.png
+│   ├── 03_items_in_cart_distribution.png
+│   └── 04_total_price_distribution.png
+├── notebooks
+│   └── exploratory_data_analysis.ipynb
 ├── CHANGE_LOG.md
+├── README.md
 ├── requirements.txt
-└── .gitignore
+└── SUMMARY.md
 ```
+
+## Descriptive Statistics — Chart Preview
+
+### 1. Quantity Distribution
+
+![Quantity Distribution](images/01_quantity_distribution.png)
+
+This histogram shows how many items were purchased per order. The values are concentrated within the small range of 1 to 5, with the distribution staying fairly balanced around the typical quantity.
+
+### 2. Unit Price Distribution
+
+![Unit Price Distribution](images/02_unit_price_distribution.png)
+
+This chart shows the spread of unit prices across the orders. The values cover a wide price range, while the mean and median remain quite close to each other.
+
+### 3. Items in Cart Distribution
+
+![Items in Cart Distribution](images/03_items_in_cart_distribution.png)
+
+This histogram shows the number of items in a customer's cart for each order. Most observations are centred around the middle of the 1 to 10 range, with a little more variation than Quantity.
+
+### 4. Total Price Distribution
+
+![Total Price Distribution](images/04_total_price_distribution.png)
+
+This chart shows the distribution of total order values. The mean is higher than the median, which indicates that some higher-value orders are pulling the average upward.
 
 ## Final Output
 
@@ -72,6 +99,12 @@ The final notebook will contain the completed exploratory analysis, visual evide
 **Task 1 — Project Purpose: Completed**
 
 The cleaned dataset from Project 1 has been loaded successfully and confirmed as the starting point for the EDA. The dataset contains 1,200 records and 14 columns.
+
+**Task 2 — Descriptive Statistics: Completed**
+
+The numerical fields were analyzed using count, mean, median, and the five-number summary. Distribution charts were created for Quantity, UnitPrice, ItemsInCart, and TotalPrice, and skewness was used to support the distribution analysis.
+
+The comparison between mean and median showed that `TotalPrice` has the largest gap. Its mean is 1053.97 compared with a median of 823.62, while the other variables have much smaller differences.
 
 The remaining parts of Project 2 will be added separately as each task is completed and verified.
 
