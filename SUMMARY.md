@@ -137,12 +137,40 @@ The UnitPrice–TotalPrice scatter plot is interpreted carefully because `TotalP
 
 The monthly sales chart highlights June 2024, which had the highest monthly total sales (**68,068.54**) in the earlier analysis. The chart uses dataset units rather than assuming a specific currency.
 
+## Task 6 — Analytical Insights
+
+Task 6 brings the findings from the earlier stages together and explains their meaning without repeating every calculation.
+
+### Completed Work
+
+The notebook:
+
+- Identifies the main findings from monthly sales and order activity.
+- Interprets the difference between the mean and median of `TotalPrice`.
+- Summarises the key Pearson correlations and explains why the relationship with `TotalPrice` needs care.
+- Revisits the eight IQR-flagged `TotalPrice` records and explains why they were retained.
+- Combines the observations into a final findings table.
+- Records limitations so that the conclusions do not claim more than the dataset supports.
+
+### Current Result
+
+The main findings are:
+
+- June 2024 recorded the highest monthly total sales (**68,068.54**) and the highest order count (**53**).
+- January 2025 had the lowest monthly order count (**27**), while April 2023 had the lowest monthly total sales (**27,751.71**).
+- `TotalPrice` has a mean of **1,053.97**, a median of **823.62**, and skewness of **0.89**, indicating a positively skewed distribution.
+- The strongest Pearson correlation was between `UnitPrice` and `TotalPrice` (**0.717**), followed by `Quantity` and `ItemsInCart` (**0.650**) and `Quantity` and `TotalPrice` (**0.615**).
+- Eight `TotalPrice` records (**0.67%**) were flagged by the IQR method. The investigation did not find calculation inconsistencies, so the records remain included.
+
+The findings describe this dataset. They do not establish why monthly activity changed or prove that one variable causes another. The currency is not specified because it has not been confirmed by the available dataset documentation.
+
 ## Current Status
 
-- **Task 1 — Completed**
-- **Task 2 — Completed**
-- **Task 3 — Completed**
-- **Task 4 — Completed**
-- **Task 5 — Completed**
+- **Task 1 — Project Purpose: Completed**
+- **Task 2 — Descriptive Statistics: Completed**
+- **Task 3 — Trends and Outliers: Completed**
+- **Task 4 — Relationships and Correlation: Completed**
+- **Task 5 — Visual Evidence: Completed**
+- **Task 6 — Analytical Insights: Completed**
 
 The completed work should be reviewed and committed before beginning the next task.

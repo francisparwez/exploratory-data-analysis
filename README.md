@@ -4,7 +4,7 @@ This is Project 2 of my Data Analytics Internship at DecodeLabs.
 
 Project 1 was about cleaning and validating the dataset. In this project, I use that cleaned dataset to explore patterns, trends, distributions, unusual observations, and relationships between variables.
 
-The work is being completed step by step, with each task reviewed before moving to the next one.
+The project is organised into tasks, with each stage reviewed before moving to the next one. Tasks 1–6 are now documented in the notebook and project files.
 
 ## What I Will Explore
 
@@ -16,7 +16,8 @@ The work is being completed step by step, with each task reviewed before moving 
 - Relationships between numerical variables using Pearson correlation
 - Visualizations that help explain the findings
 - Key observations and their meaning in context
-- Recommendations where the analysis supports them
+- An evidence-based summary of the main analytical findings
+- Business recommendations in the next project task, where the evidence supports them
 
 ## Dataset
 
@@ -206,6 +207,20 @@ Task 5 reviewed the existing visuals and made targeted improvements rather than 
 
 The relationship between `UnitPrice` and `TotalPrice` needs particular care because `TotalPrice` is calculated as `Quantity × UnitPrice`. Correlation describes association and does not establish causation. The currency is not labelled as a specific currency because it has not been confirmed by the available dataset documentation.
 
+## Task 6 — Analytical Insights
+
+Task 6 brings the results from the earlier analysis together and explains the main findings in plain language.
+
+### Main findings
+
+- **Monthly activity varied:** June 2024 had the highest monthly total sales (68,068.54) and the highest monthly order count (53). January 2025 had the lowest monthly order count (27), while April 2023 had the lowest monthly total sales (27,751.71).
+- **Order values are positively skewed:** `TotalPrice` had a mean of 1,053.97 and a median of 823.62, with skewness of 0.89. Higher-value transactions pull the mean above the median.
+- **Some numerical variables move together:** `UnitPrice` and `TotalPrice` had the strongest Pearson correlation (0.717), followed by `Quantity` and `ItemsInCart` (0.650), and `Quantity` and `TotalPrice` (0.615). The `TotalPrice` relationship must be interpreted carefully because it is calculated from `Quantity × UnitPrice`.
+- **Unusual values were investigated:** the IQR method flagged eight `TotalPrice` records (0.67% of the dataset). The records matched the expected calculation and were retained because an IQR flag alone does not prove an error.
+- **The results have limits:** the dataset shows patterns and associations, but it does not establish why monthly results changed or prove cause and effect.
+
+These findings summarise the available evidence. They do not assume a specific currency because the dataset documentation does not confirm one.
+
 ## Current Progress
 
 **Task 1 — Project Purpose: Completed**
@@ -227,6 +242,10 @@ Calculated Pearson correlations for all six unique variable pairs, created a hea
 **Task 5 — Visual Evidence: Completed**
 
 Reviewed the 14 original charts and made targeted presentation improvements to the monthly sales trend, `UnitPrice` versus `TotalPrice` scatter plot, and `TotalPrice` boxplot. The final inventory lists 16 expected chart files, including the two separately saved review charts; the recorded notebook check found all 16 files. The eight IQR-flagged `TotalPrice` records remain included, and the charts are interpreted as evidence of patterns rather than proof of causation.
+
+**Task 6 — Analytical Insights: Completed**
+
+Brought the main findings together in the notebook, covering monthly sales and order activity, the distribution of order values, numerical relationships, and high-value transactions. The conclusions remain tied to the available evidence and acknowledge that the analysis cannot explain the causes of monthly changes or establish causation.
 
 ## Internship
 
