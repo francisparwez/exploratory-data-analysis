@@ -2,39 +2,37 @@
 
 This is Project 2 of my Data Analytics Internship at DecodeLabs.
 
-Project 1 was about cleaning and validating the dataset. In this project, I will use that cleaned and validated dataset to explore what the data is actually telling me by looking for patterns, trends, distributions, and useful observations.
+Project 1 was about cleaning and validating the dataset. In this project, I use that cleaned dataset to explore patterns, trends, distributions, unusual observations, and relationships between variables.
 
-The work is being completed step by step, starting with understanding the purpose of the EDA before moving into the analysis.
+The work is being completed step by step, with each task reviewed before moving to the next one.
 
 ## What I Will Explore
 
 - Basic descriptive statistics such as count, mean, median, and the five-number summary
 - The shape and distribution of numerical variables
 - Differences between mean and median
-- Trends and patterns in the data
+- Monthly trends in order activity and total sales
 - Potential outliers using IQR and Z-score methods
-- Relationships between variables using correlation analysis
+- Relationships between numerical variables using Pearson correlation
 - Visualizations that help explain the findings
-- Key observations and the business meaning behind them
-- Actionable recommendations where the analysis supports them
+- Key observations and their meaning in context
+- Recommendations where the analysis supports them
 
 ## Dataset
 
-The starting point for this project is the cleaned dataset produced in Project 1.
+The starting point is the cleaned dataset produced in Project 1.
 
-The cleaned dataset contains 1,200 records and 14 columns and is stored in:
-
-`data/input/cleaned_dataset.xlsx`
+- **Records:** 1,200
+- **Columns:** 14
+- **Input file:** `data/input/cleaned_dataset.xlsx`
 
 Using the cleaned dataset keeps this project focused on analysis rather than repeating the data-cleaning work from Project 1.
 
 ## Project Approach
 
-The analysis will follow a simple process:
+The analysis follows a simple process:
 
 **Question → Exploration → Evidence → Insight**
-
-The first three tasks established the purpose of the EDA, examined the numerical fields, and investigated trends and unusual observations.
 
 ## Tools Used
 
@@ -49,10 +47,10 @@ The first three tasks established the purpose of the EDA, examined the numerical
 
 ```text
 exploratory-data-analysis/
-├── data
-│   └── input
+├── data/
+│   └── input/
 │       └── cleaned_dataset.xlsx
-├── images
+├── images/
 │   ├── 01_quantity_distribution.png
 │   ├── 02_unit_price_distribution.png
 │   ├── 03_items_in_cart_distribution.png
@@ -62,8 +60,12 @@ exploratory-data-analysis/
 │   ├── 07_boxplot_quantity.png
 │   ├── 08_boxplot_unit_price.png
 │   ├── 09_boxplot_items_in_cart.png
-│   └── 10_boxplot_total_price.png
-├── notebooks
+│   ├── 10_boxplot_total_price.png
+│   ├── 11_correlation_heatmap.png
+│   ├── 12_unitprice_vs_totalprice.png
+│   ├── 13_quantity_vs_totalprice.png
+│   └── 14_itemsincart_vs_totalprice.png
+├── notebooks/
 │   └── exploratory_data_analysis.ipynb
 ├── CHANGE_LOG.md
 ├── README.md
@@ -77,25 +79,25 @@ exploratory-data-analysis/
 
 ![Quantity Distribution](images/01_quantity_distribution.png)
 
-This histogram shows how many items were purchased in each order. The values stay within a small range of 1 to 5.
+This histogram shows how many units were purchased in each order. The observed values range from 1 to 5.
 
 ### 2. Unit Price Distribution
 
 ![Unit Price Distribution](images/02_unit_price_distribution.png)
 
-This chart shows the spread of unit prices across the orders. The mean and median are close, so the centre of the distribution is fairly stable.
+This chart shows the spread of unit prices. The mean and median are close, so the distribution is centred fairly evenly.
 
 ### 3. Items in Cart Distribution
 
 ![Items in Cart Distribution](images/03_items_in_cart_distribution.png)
 
-This histogram shows the number of items in the cart for each order and how the observations are spread across the 1 to 10 range.
+This histogram shows how the number of items in the cart is distributed across the records.
 
 ### 4. Total Price Distribution
 
 ![Total Price Distribution](images/04_total_price_distribution.png)
 
-This chart shows the distribution of total order values. The mean is higher than the median, which is consistent with some higher-value orders pulling the average upward.
+The mean `TotalPrice` is higher than its median, which is consistent with higher-value orders pulling the average upward.
 
 ## Trends and Outliers — Chart Preview
 
@@ -103,65 +105,104 @@ This chart shows the distribution of total order values. The mean is higher than
 
 ![Monthly Order Trend](images/05_monthly_order_trend.png)
 
-This line chart shows monthly order activity from January 2023 to June 2025. The number of orders moves up and down across the period, with June 2024 recording the highest monthly order count at 53.
+Monthly order activity fluctuates from January 2023 to June 2025. June 2024 recorded the highest monthly order count, at 53.
 
 ### 6. Monthly Total Sales Trend
 
 ![Monthly Total Sales Trend](images/06_monthly_total_sales_trend.png)
 
-This chart shows how total monthly sales changed over the same period. Sales fluctuate noticeably, with the highest monthly total sales recorded in June 2024 at 68,068.54.
+Monthly total sales fluctuate over the same period. June 2024 had the highest monthly total sales, at 68,068.54.
 
 ### 7. Quantity Boxplot
 
 ![Quantity Boxplot](images/07_boxplot_quantity.png)
 
-The boxplot shows the spread of `Quantity`. The IQR method did not identify any potential outliers for this variable.
+The IQR method did not identify potential outliers in `Quantity`.
 
 ### 8. Unit Price Boxplot
 
 ![Unit Price Boxplot](images/08_boxplot_unit_price.png)
 
-This boxplot shows the spread of `UnitPrice`. No potential outliers were identified using the IQR method.
+The IQR method did not identify potential outliers in `UnitPrice`.
 
 ### 9. Items in Cart Boxplot
 
 ![Items in Cart Boxplot](images/09_boxplot_items_in_cart.png)
 
-This boxplot shows the spread of `ItemsInCart`. The IQR method did not flag any observations as potential outliers.
+The IQR method did not flag observations in `ItemsInCart`.
 
 ### 10. Total Price Boxplot
 
 ![Total Price Boxplot](images/10_boxplot_total_price.png)
 
-The `TotalPrice` boxplot highlights the small number of unusually high-value orders identified by the IQR method. Eight records were flagged for further investigation.
+The IQR method flagged eight unusually high `TotalPrice` records for further investigation.
 
-## Final Output
+## Relationships and Correlation — Chart Preview
 
-The final notebook will contain the completed exploratory analysis, visual evidence, key observations, and conclusions from the dataset.
+Task 4 uses Pearson correlation to explore linear relationships between `Quantity`, `UnitPrice`, `ItemsInCart`, and `TotalPrice`.
 
-### Current Progress
+### 11. Pearson Correlation Heatmap
+
+![Pearson Correlation Heatmap](images/11_correlation_heatmap.png)
+
+The heatmap compares the Pearson correlation values for the four numerical variables.
+
+### 12. Unit Price vs Total Price
+
+![UnitPrice vs TotalPrice](images/12_unitprice_vs_totalprice.png)
+
+The correlation is approximately **0.717**, indicating a strong positive linear association. `TotalPrice` is calculated using `Quantity × UnitPrice`, so this relationship should be interpreted in the context of that formula.
+
+### 13. Quantity vs Total Price
+
+![Quantity vs TotalPrice](images/13_quantity_vs_totalprice.png)
+
+The correlation is approximately **0.615**, indicating a positive linear association between quantity and total price.
+
+### 14. Items in Cart vs Total Price
+
+![ItemsInCart vs TotalPrice](images/14_itemsincart_vs_totalprice.png)
+
+The correlation is approximately **0.393**, indicating a moderate positive linear association.
+
+## Task 4 — Main Correlation Findings
+
+Pearson correlation was calculated for all six unique pairs of numerical variables.
+
+| Variable pair              | Pearson correlation | Interpretation                       |
+| -------------------------- | ------------------: | ------------------------------------ |
+| UnitPrice and TotalPrice   |               0.717 | Strong positive linear association   |
+| Quantity and ItemsInCart   |               0.650 | Strong positive linear association   |
+| Quantity and TotalPrice    |               0.615 | Strong positive linear association   |
+| ItemsInCart and TotalPrice |               0.393 | Moderate positive linear association |
+| Quantity and UnitPrice     |               0.015 | Little or no linear association      |
+| UnitPrice and ItemsInCart  |               0.001 | Little or no linear association      |
+
+The tests at the 5% significance level found statistically significant correlations for the four pairs with larger correlation values. The correlations between `Quantity` and `UnitPrice`, and between `UnitPrice` and `ItemsInCart`, were not statistically significant.
+
+The eight high-value `TotalPrice` records identified in Task 3 were temporarily excluded for a sensitivity check. The correlation values changed only slightly, so the relationships were not heavily influenced by those records in this comparison.
+
+The `TotalPrice` calculation was also checked against `Quantity × UnitPrice`. All 1,200 records matched after rounding to two decimal places.
+
+**Correlation does not imply causation.** In particular, the relationship between `TotalPrice` and the variables used to calculate it is partly built into the dataset's formula. The results describe linear associations in this dataset and should not be treated as proof of cause and effect.
+
+## Current Progress
 
 **Task 1 — Project Purpose: Completed**
 
-The cleaned dataset from Project 1 has been loaded successfully and confirmed as the starting point for the EDA. The dataset contains 1,200 records and 14 columns.
+Loaded the cleaned dataset from Project 1 and confirmed that it contains 1,200 records and 14 columns.
 
 **Task 2 — Descriptive Statistics: Completed**
 
-The numerical fields were analyzed using count, mean, median, and the five-number summary. Distribution charts were created for Quantity, UnitPrice, ItemsInCart, and TotalPrice, and skewness was used to support the distribution analysis.
-
-The comparison between mean and median showed that `TotalPrice` has the largest gap. Its mean is 1053.97 compared with a median of 823.62, while the other variables have much smaller differences.
+Calculated count, mean, median, five-number summaries, skewness, and mean-versus-median differences. Created distribution charts for the four numerical variables.
 
 **Task 3 — Trends and Outliers: Completed**
 
-Monthly order activity and total sales were analyzed from January 2023 to June 2025. June 2024 had the highest order count at 53 and the highest total sales at 68,068.54. January 2025 had the lowest monthly order count at 27, while April 2023 had the lowest monthly total sales at 27,751.71.
+Analysed monthly order activity and total sales from January 2023 to June 2025. The IQR method flagged eight `TotalPrice` records (0.67% of the dataset). Their calculated totals matched `Quantity × UnitPrice`; the Z-score method found no records beyond the threshold of 3. The eight records are retained for the remaining analysis.
 
-The IQR method identified eight potential outliers in `TotalPrice`, representing 0.67% of the dataset. No IQR outliers were found for Quantity, UnitPrice, or ItemsInCart. The eight high-value records were checked against the expected `Quantity × UnitPrice` calculation and all passed the check.
+**Task 4 — Relationships and Correlation: Completed**
 
-The Z-score method identified no observations above the threshold of 3. The IQR-identified TotalPrice records had Z-scores between 2.78 and 2.93, so they were unusual but not extreme under the Z-score rule.
-
-The eight records will be retained for the remaining analysis because the investigation did not find evidence of a calculation or pricing inconsistency.
-
-The remaining parts of Project 2 will be added separately as each task is completed and verified.
+Calculated Pearson correlations for all six unique variable pairs, created a heatmap and three scatter plots, tested statistical significance, checked the `TotalPrice` calculation, and compared correlations with and without the eight high-value `TotalPrice` records. The analysis treats correlation as association, not causation.
 
 ## Internship
 
