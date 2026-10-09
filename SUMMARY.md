@@ -112,11 +112,37 @@ All 1,200 records matched `Quantity × UnitPrice` after rounding to two decimal 
 
 These results describe associations in this dataset. Correlation does not establish causation, and Pearson correlation measures linear relationships rather than every possible kind of relationship.
 
+## Task 5 — Visual Evidence
+
+Task 5 reviewed the existing charts and improved selected visuals so that the evidence is easier to read and interpret.
+
+### Completed Work
+
+The notebook:
+
+- Reviewed the 14 original charts for purpose, readability, labels, and potential interpretation issues.
+- Created a chart review table and prioritised presentation improvements.
+- Improved the monthly total sales chart by reducing date-label crowding, formatting the sales axis, and highlighting the highest-sales month.
+- Created a separately saved review version of the `UnitPrice` versus `TotalPrice` scatter plot while preserving the original chart.
+- Created a separately saved review version of the `TotalPrice` boxplot with the upper IQR limit marked.
+- Checked an inventory of 16 expected chart files, including the original charts and two separately saved review visuals.
+
+### Current Result
+
+The final chart inventory check recorded **16 expected chart files, 16 files found, and 0 files missing**.
+
+The revised TotalPrice boxplot still identifies **8 IQR-flagged values** among 1,200 records. These records remain included because an IQR flag alone does not prove a data error.
+
+The UnitPrice–TotalPrice scatter plot is interpreted carefully because `TotalPrice` is calculated from `Quantity × UnitPrice`. The visual describes the observed relationship and is not presented as evidence of causation.
+
+The monthly sales chart highlights June 2024, which had the highest monthly total sales (**68,068.54**) in the earlier analysis. The chart uses dataset units rather than assuming a specific currency.
+
 ## Current Status
 
 - **Task 1 — Completed**
 - **Task 2 — Completed**
 - **Task 3 — Completed**
 - **Task 4 — Completed**
+- **Task 5 — Completed**
 
-The next task will be added only after the completed work so far has been documented and committed.
+The completed work should be reviewed and committed before beginning the next task.

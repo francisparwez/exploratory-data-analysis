@@ -186,6 +186,26 @@ The `TotalPrice` calculation was also checked against `Quantity × UnitPrice`. A
 
 **Correlation does not imply causation.** In particular, the relationship between `TotalPrice` and the variables used to calculate it is partly built into the dataset's formula. The results describe linear associations in this dataset and should not be treated as proof of cause and effect.
 
+## Visual Evidence — Task 5
+
+Task 5 reviewed the existing visuals and made targeted improvements rather than adding charts without a clear purpose.
+
+### Improvements made
+
+- Updated `06_monthly_total_sales_trend.png` with less crowded date labels, clearer sales-axis formatting, and an annotation for the highest-sales month.
+- Added `15_unitprice_vs_totalprice_review.png` as a clearer review version of the scatter plot. The original chart is preserved.
+- Added `16_totalprice_boxplot_review.png` with the upper IQR limit marked. The eight flagged `TotalPrice` observations remain in the analysis.
+- Checked the inventory of 16 expected chart files. The notebook's recorded check found all 16 files and no missing files.
+
+### How the visuals support the analysis
+
+- Distribution charts show how the numerical values are spread.
+- Monthly trend charts show changes in order activity and sales over time.
+- Boxplots help identify unusual observations for further investigation.
+- The heatmap and scatter plots show linear associations between numerical variables.
+
+The relationship between `UnitPrice` and `TotalPrice` needs particular care because `TotalPrice` is calculated as `Quantity × UnitPrice`. Correlation describes association and does not establish causation. The currency is not labelled as a specific currency because it has not been confirmed by the available dataset documentation.
+
 ## Current Progress
 
 **Task 1 — Project Purpose: Completed**
@@ -203,6 +223,10 @@ Analysed monthly order activity and total sales from January 2023 to June 2025. 
 **Task 4 — Relationships and Correlation: Completed**
 
 Calculated Pearson correlations for all six unique variable pairs, created a heatmap and three scatter plots, tested statistical significance, checked the `TotalPrice` calculation, and compared correlations with and without the eight high-value `TotalPrice` records. The analysis treats correlation as association, not causation.
+
+**Task 5 — Visual Evidence: Completed**
+
+Reviewed the 14 original charts and made targeted presentation improvements to the monthly sales trend, `UnitPrice` versus `TotalPrice` scatter plot, and `TotalPrice` boxplot. The final inventory lists 16 expected chart files, including the two separately saved review charts; the recorded notebook check found all 16 files. The eight IQR-flagged `TotalPrice` records remain included, and the charts are interpreted as evidence of patterns rather than proof of causation.
 
 ## Internship
 
