@@ -15,7 +15,7 @@ This file records the work completed in the project as each task is finished.
 
 | EDA007 | Task 5 — Visual Evidence | Reviewed the existing chart set, improved monthly sales trend readability, added separately saved review versions of the UnitPrice–TotalPrice scatter plot and TotalPrice boxplot, and checked the final chart inventory | To make visual evidence easier to read and interpret without creating unnecessary charts or removing flagged records automatically | Final inventory lists 16 expected chart files; the notebook's recorded check found 16 files and 0 missing. Eight IQR-flagged TotalPrice records remain included. | Completed |
 
-| EDA008 | Task 6 — Analytical Insights | Consolidated the main findings on monthly activity, order-value distribution, numerical relationships, and high-value transactions; documented interpretation limits | To explain what the earlier statistics and visuals show, rather than listing results without context | Added a findings summary and evidence-based conclusion while retaining the eight IQR-flagged records and avoiding causal claims | Completed |
+| EDA009 | Task 7 — Business Impact and Recommendations | Added business interpretation, recommendation priorities, a measurement plan, and evidence-to-action summaries | To connect exploratory findings to realistic business follow-up actions | Documented recommendations on monthly monitoring, transaction-value tracking, basket-size investigation, and verification of unusual records; noted data limitations and avoided unsupported causal or financial claims | Completed |
 
 ## Notes
 

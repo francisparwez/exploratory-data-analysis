@@ -4,7 +4,7 @@ This is Project 2 of my Data Analytics Internship at DecodeLabs.
 
 Project 1 was about cleaning and validating the dataset. In this project, I use that cleaned dataset to explore patterns, trends, distributions, unusual observations, and relationships between variables.
 
-The project is organised into tasks, with each stage reviewed before moving to the next one. Tasks 1–6 are now documented in the notebook and project files.
+The project is organised into tasks, with each stage reviewed before moving to the next one. Tasks 1–7 are now documented in the notebook and project files.
 
 ## What I Will Explore
 
@@ -16,8 +16,7 @@ The project is organised into tasks, with each stage reviewed before moving to t
 - Relationships between numerical variables using Pearson correlation
 - Visualizations that help explain the findings
 - Key observations and their meaning in context
-- An evidence-based summary of the main analytical findings
-- Business recommendations in the next project task, where the evidence supports them
+- Evidence-based business recommendations and ways to measure them
 
 ## Dataset
 
@@ -207,19 +206,25 @@ Task 5 reviewed the existing visuals and made targeted improvements rather than 
 
 The relationship between `UnitPrice` and `TotalPrice` needs particular care because `TotalPrice` is calculated as `Quantity × UnitPrice`. Correlation describes association and does not establish causation. The currency is not labelled as a specific currency because it has not been confirmed by the available dataset documentation.
 
-## Task 6 — Analytical Insights
+## Task 7 — Business Impact and Recommendations
 
-Task 6 brings the results from the earlier analysis together and explains the main findings in plain language.
+Task 7 connects the exploratory findings to practical business questions and possible actions. The recommendations are suggestions for follow-up, not claims that a particular action will guarantee better results.
 
-### Main findings
+### Main findings and possible business uses
 
-- **Monthly activity varied:** June 2024 had the highest monthly total sales (68,068.54) and the highest monthly order count (53). January 2025 had the lowest monthly order count (27), while April 2023 had the lowest monthly total sales (27,751.71).
-- **Order values are positively skewed:** `TotalPrice` had a mean of 1,053.97 and a median of 823.62, with skewness of 0.89. Higher-value transactions pull the mean above the median.
-- **Some numerical variables move together:** `UnitPrice` and `TotalPrice` had the strongest Pearson correlation (0.717), followed by `Quantity` and `ItemsInCart` (0.650), and `Quantity` and `TotalPrice` (0.615). The `TotalPrice` relationship must be interpreted carefully because it is calculated from `Quantity × UnitPrice`.
-- **Unusual values were investigated:** the IQR method flagged eight `TotalPrice` records (0.67% of the dataset). The records matched the expected calculation and were retained because an IQR flag alone does not prove an error.
-- **The results have limits:** the dataset shows patterns and associations, but it does not establish why monthly results changed or prove cause and effect.
+- **Monthly performance varies.** June 2024 recorded the highest monthly sales (68,068.54) and highest order count (53). January 2025 had the lowest order count (27), while April 2023 had the lowest monthly sales (27,751.71). Reviewing monthly sales and order counts together may help with operational planning, but the dataset does not explain the causes of the changes.
+- **The mean transaction value is higher than the median.** Mean `TotalPrice` was 1,053.97 and median `TotalPrice` was 823.62. Tracking both measures can give a more complete view of transaction values.
+- **Basket size may warrant further investigation.** `ItemsInCart` and `TotalPrice` had a Pearson correlation of 0.393. This is an association, not proof that increasing basket size will increase sales or profit.
+- **Unusual transactions were investigated.** Eight `TotalPrice` records (0.67% of the dataset) were flagged by the IQR method. Their totals matched `Quantity × UnitPrice` to two decimal places, so they remain included unless additional evidence identifies an error.
 
-These findings summarise the available evidence. They do not assume a specific currency because the dataset documentation does not confirm one.
+### Recommendations
+
+1. Review monthly sales and order counts together, and compare them with operational information such as staffing and stock records where available.
+2. Monitor mean and median transaction values across comparable periods.
+3. Investigate basket-level data before testing any changes intended to affect transaction value.
+4. Verify unusual transactions against source records when available rather than removing them solely because they are statistical outliers.
+
+The dataset does not confirm a currency or provide enough information to calculate profit impact, cost savings, or additional revenue. Recommendations should therefore be evaluated with further operational data and measured results.
 
 ## Current Progress
 
@@ -241,11 +246,15 @@ Calculated Pearson correlations for all six unique variable pairs, created a hea
 
 **Task 5 — Visual Evidence: Completed**
 
-Reviewed the 14 original charts and made targeted presentation improvements to the monthly sales trend, `UnitPrice` versus `TotalPrice` scatter plot, and `TotalPrice` boxplot. The final inventory lists 16 expected chart files, including the two separately saved review charts; the recorded notebook check found all 16 files. The eight IQR-flagged `TotalPrice` records remain included, and the charts are interpreted as evidence of patterns rather than proof of causation.
+Reviewed the original charts and improved the monthly sales trend, `UnitPrice` versus `TotalPrice` scatter plot, and `TotalPrice` boxplot. The recorded inventory check found all 16 expected chart files. The eight IQR-flagged `TotalPrice` records remain included.
 
 **Task 6 — Analytical Insights: Completed**
 
-Brought the main findings together in the notebook, covering monthly sales and order activity, the distribution of order values, numerical relationships, and high-value transactions. The conclusions remain tied to the available evidence and acknowledge that the analysis cannot explain the causes of monthly changes or establish causation.
+Consolidated the findings on monthly activity, transaction-value distribution, numerical relationships, and high-value transactions. The conclusions describe observed patterns and acknowledge that correlation does not establish causation.
+
+**Task 7 — Business Impact and Recommendations: Completed**
+
+Connected the findings to possible business uses and created evidence-to-action and measurement tables. Recommendations focus on reviewing monthly performance, monitoring mean and median transaction values, investigating basket-size patterns, and verifying unusual transactions. The proposed actions are not presented as guaranteed improvements; further operational data and measured results are needed to evaluate their impact.
 
 ## Internship
 

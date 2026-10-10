@@ -137,32 +137,37 @@ The UnitPrice–TotalPrice scatter plot is interpreted carefully because `TotalP
 
 The monthly sales chart highlights June 2024, which had the highest monthly total sales (**68,068.54**) in the earlier analysis. The chart uses dataset units rather than assuming a specific currency.
 
-## Task 6 — Analytical Insights
+## Task 7 — Business Impact and Recommendations
 
-Task 6 brings the findings from the earlier stages together and explains their meaning without repeating every calculation.
+Task 7 translates the earlier EDA findings into possible business uses and practical next steps.
 
 ### Completed Work
 
 The notebook:
 
-- Identifies the main findings from monthly sales and order activity.
-- Interprets the difference between the mean and median of `TotalPrice`.
-- Summarises the key Pearson correlations and explains why the relationship with `TotalPrice` needs care.
-- Revisits the eight IQR-flagged `TotalPrice` records and explains why they were retained.
-- Combines the observations into a final findings table.
-- Records limitations so that the conclusions do not claim more than the dataset supports.
+- Compares the highest and lowest monthly sales and order counts and compares these with monthly averages.
+- Summarises mean and median transaction values.
+- Reuses the Pearson correlation and outlier sensitivity results from Task 4.
+- Creates business-implication, recommendation, measurement-plan, and evidence-to-action tables.
+- Identifies additional information needed before implementing recommendations.
+- Records limitations, including the lack of confirmed currency, profit/cost data, operational context, and causal evidence.
 
 ### Current Result
 
-The main findings are:
+- June 2024 had the highest monthly sales (**68,068.54**) and order count (**53**).
+- January 2025 had the lowest monthly order count (**27**); April 2023 had the lowest monthly sales (**27,751.71**).
+- Mean `TotalPrice` was **1,053.97**, compared with a median of **823.62**.
+- `ItemsInCart` and `TotalPrice` had a Pearson correlation of **0.393**. This is an association and does not show that increasing basket size will cause sales or profit to rise.
+- Eight `TotalPrice` records (**0.67%**) were flagged by IQR. Their calculations matched `Quantity × UnitPrice` to two decimal places, so they remain included based on the checks performed.
 
-- June 2024 recorded the highest monthly total sales (**68,068.54**) and the highest order count (**53**).
-- January 2025 had the lowest monthly order count (**27**), while April 2023 had the lowest monthly total sales (**27,751.71**).
-- `TotalPrice` has a mean of **1,053.97**, a median of **823.62**, and skewness of **0.89**, indicating a positively skewed distribution.
-- The strongest Pearson correlation was between `UnitPrice` and `TotalPrice` (**0.717**), followed by `Quantity` and `ItemsInCart` (**0.650**) and `Quantity` and `TotalPrice` (**0.615**).
-- Eight `TotalPrice` records (**0.67%**) were flagged by the IQR method. The investigation did not find calculation inconsistencies, so the records remain included.
+### Recommendations Recorded
 
-The findings describe this dataset. They do not establish why monthly activity changed or prove that one variable causes another. The currency is not specified because it has not been confirmed by the available dataset documentation.
+1. Review monthly sales and order counts together, and compare them with operational records where available.
+2. Monitor mean and median transaction values over comparable periods.
+3. Investigate basket-level data before testing actions intended to affect transaction value.
+4. Verify unusual transactions against source records rather than removing them automatically.
+
+The recommendations are evidence-informed suggestions, not guaranteed business outcomes. Additional operational data and measured results are needed to determine their effectiveness.
 
 ## Current Status
 
@@ -172,5 +177,6 @@ The findings describe this dataset. They do not establish why monthly activity c
 - **Task 4 — Relationships and Correlation: Completed**
 - **Task 5 — Visual Evidence: Completed**
 - **Task 6 — Analytical Insights: Completed**
+- **Task 7 — Business Impact and Recommendations: Completed**
 
 The completed work should be reviewed and committed before beginning the next task.
