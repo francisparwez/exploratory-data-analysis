@@ -4,7 +4,7 @@ This is Project 2 of my Data Analytics Internship at DecodeLabs.
 
 Project 1 was about cleaning and validating the dataset. In this project, I use that cleaned dataset to explore patterns, trends, distributions, unusual observations, and relationships between variables.
 
-The project is organised into tasks, with each stage reviewed before moving to the next one. Tasks 1–7 are now documented in the notebook and project files.
+The project is organised into tasks, with each stage reviewed before moving to the next one. Tasks 1–8 are documented in the notebook and project files. Task 8 adds final quality checks and presentation guidance.
 
 ## What I Will Explore
 
@@ -64,7 +64,9 @@ exploratory-data-analysis/
 │   ├── 11_correlation_heatmap.png
 │   ├── 12_unitprice_vs_totalprice.png
 │   ├── 13_quantity_vs_totalprice.png
-│   └── 14_itemsincart_vs_totalprice.png
+│   ├── 14_itemsincart_vs_totalprice.png
+│   ├── 15_unitprice_vs_totalprice_review.png
+│   └── 16_totalprice_boxplot_review.png
 ├── notebooks/
 │   └── exploratory_data_analysis.ipynb
 ├── CHANGE_LOG.md
@@ -255,6 +257,27 @@ Consolidated the findings on monthly activity, transaction-value distribution, n
 **Task 7 — Business Impact and Recommendations: Completed**
 
 Connected the findings to possible business uses and created evidence-to-action and measurement tables. Recommendations focus on reviewing monthly performance, monitoring mean and median transaction values, investigating basket-size patterns, and verifying unusual transactions. The proposed actions are not presented as guaranteed improvements; further operational data and measured results are needed to evaluate their impact.
+
+## Task 8 — Final Presentation and Quality
+
+The final stage brings the analysis together as a clear story: problem, investigation, evidence, insight, and possible next steps.
+
+The notebook now includes quality checks for:
+
+- The expected input dataset and its shape (1,200 records and 14 columns)
+- Required analysis columns
+- Missing values and duplicate rows
+- The `TotalPrice = Quantity × UnitPrice` calculation
+- The monthly summary used in the trend analysis
+- The 16 expected chart files
+
+The saved results from these checks show all checks passing. This confirms the recorded checks, but a fresh **Restart Kernel and Run All Cells** execution should also be completed before submission.
+
+The final review keeps the findings in context: the eight IQR-flagged high `TotalPrice` records are not removed automatically, correlation is not treated as causation, and no currency or financial impact is assumed without supporting information.
+
+## Final Project Status
+
+Tasks 1–8 have been documented in the notebook and project files. The remaining submission check is to restart the notebook kernel, run every cell from the beginning, confirm there are no errors, and save the notebook.
 
 ## Internship
 

@@ -180,3 +180,37 @@ The recommendations are evidence-informed suggestions, not guaranteed business o
 - **Task 7 — Business Impact and Recommendations: Completed**
 
 The completed work should be reviewed and committed before beginning the next task.
+
+## Task 8 — Final Presentation and Quality
+
+Task 8 focuses on presenting the complete EDA as a clear problem → investigation → evidence → insight story and checking that the notebook and supporting files are ready to share.
+
+### Completed Work
+
+The notebook:
+
+- Adds a final explanation of the analysis story and the scope of the review.
+- Checks that the input file exists and the dataset contains 1,200 records and 14 columns.
+- Checks the required analysis columns, missing values, and duplicate rows.
+- Recalculates `TotalPrice` from `Quantity × UnitPrice` and checks for mismatches.
+- Checks the monthly summary used in the trend analysis.
+- Checks for the 16 expected chart files.
+- Combines the results into a final quality-check table.
+
+### Current Result
+
+The latest saved notebook outputs show all 12 quality checks passing: the input dataset and expected structure are present, required columns are available, no missing values or duplicate rows were detected, all 1,200 total-price calculations match after rounding, monthly summary checks pass, and all 16 chart files are found.
+
+This is a check of the saved notebook outputs. A fresh kernel restart and full run of every cell remains the final execution test before submission.
+
+### Final Presentation Notes
+
+- Keep the charts, labels, and explanations understandable for non-technical readers.
+- Retain the eight IQR-flagged `TotalPrice` records unless source-level evidence shows an error.
+- Describe correlation as association, not causation.
+- Do not assume a currency or claim profit, savings, or revenue impact without supporting data.
+- Keep `README.md`, `SUMMARY.md`, `CHANGE_LOG.md`, and `requirements.txt` alongside the notebook and input data.
+
+## Final Status
+
+Tasks 1–8 are documented. The final outstanding verification is a clean-kernel run of the notebook, followed by saving the successful run and committing the final project files.

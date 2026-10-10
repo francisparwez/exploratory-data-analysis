@@ -17,6 +17,9 @@ This file records the work completed in the project as each task is finished.
 
 | EDA009 | Task 7 — Business Impact and Recommendations | Added business interpretation, recommendation priorities, a measurement plan, and evidence-to-action summaries | To connect exploratory findings to realistic business follow-up actions | Documented recommendations on monthly monitoring, transaction-value tracking, basket-size investigation, and verification of unusual records; noted data limitations and avoided unsupported causal or financial claims | Completed |
 
+| EDA008 | Task 6 — Analytical Insights | Consolidated the findings from descriptive statistics, monthly trends, outlier review, correlations, and visual evidence | To explain what the combined results mean while keeping the conclusions within the evidence | Added a joined-up interpretation of the observed patterns, relationships, and limitations | Completed |
+| EDA010 | Task 8 — Final Presentation and Quality | Added the final project story, quality checks for the dataset, required columns, missing values, duplicate rows, total-price calculation, monthly summary, and chart inventory; updated project documentation | To make the final EDA easier to review, reproduce, and share | The latest saved checks show all 12 checks passing and all 16 expected charts found; a fresh kernel restart and full run remains the final execution test | Completed |
+
 ## Notes
 
 Tasks are completed and documented separately so that each stage can be reviewed and committed before moving to the next one.
